@@ -1,0 +1,319 @@
+@import './colors.scss', './responsive.scss', './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@400;500;600;700&display=swap');
+
+/*================ RESETS ===============*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Finlandica';
+    font-size: 16px;
+}
+
+/*============= HEADER ===============*/
+
+.header-container {
+
+    background-color: $bg-color;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+    margin: 0 auto;
+   
+    & a {
+        text-decoration: none;
+        color: $text-color;
+        position: relative;
+    }
+
+    & a:hover {
+        cursor: pointer;
+    }
+
+    & a::after {
+        content: '';
+        width: 0;
+        right: 0;
+        position: absolute;
+        bottom: -0.25rem;
+        height: .125rem;
+        background-color: $text-color;
+        transition: ease .40s;
+    }
+
+    & a:hover::after {
+        width: 100%;
+    }
+}
+
+header.sticky {
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+
+
+    & li {
+        list-style: none;
+    }
+
+    & i {
+        color: $text-color;
+        text-decoration: none;
+        padding: 1em;
+        font-size: $normal-font-size;
+        font-weight: bold;
+    }
+
+    & i:hover {
+        cursor: pointer;
+        background-color: $span-color;
+        transition: all ease-in-out .40s;
+    }
+}
+
+/*============ REUSABLE CSS =============*/
+section {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: $m-1;
+    padding: 1.5em;
+}
+
+
+/*============== BANNER ==============*/
+
+.img-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.container-banner {
+
+    height: 8em;
+    margin: 0 auto;
+
+    & img {
+        max-height: 8em;
+        width: 100%;
+        z-index: 1; 
+    }
+}
+
+.profile {
+
+    height: 12em;
+    margin: 0 auto;
+    position: relative; 
+
+    & img {
+        max-height: 12em;
+        max-width: 80%;
+        position: absolute;
+        top: -5em;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        border: 4px solid white;
+        border-radius: 2rem;
+    }
+
+
+}
+
+/*================= MAIN CONTENT ===============*/
+
+.Intro {
+
+    border-bottom: 1px solid lightseagreen;
+
+    & h1 {
+        text-align: left;
+        font-weight: map-get($font-weights, bold);
+        font-size: $h1-font-size;
+        margin-bottom: $m-1-5;
+    }
+
+    .description {
+        border-left: 4px solid darkgreen;
+        margin-bottom: $m-1;
+    }
+}
+
+.description {
+
+    & p {
+        margin-left: $m-0-5;
+        font-size: $normal-font-size;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.3rem;
+    }
+}
+
+/*================= WORK EXP SECTION ===============*/
+
+.Work-exp {
+
+    border-bottom: 1px solid lightseagreen;
+
+    & h2 {
+        text-align: left;
+        font-weight: map-get($font-weights, semi-bold);
+        font-size: $h2-font-size;
+        margin-bottom: $m-1-5;
+    }
+}
+
+.work-exp-grid {
+
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 10em;
+
+    & h3 {
+        text-align: left;
+        font-weight: map-get($font-weights, medium);
+        font-size: $h3-font-size;
+        margin-bottom: $m-1-5;
+    }
+
+    & h4 {
+        text-align: left;
+        font-weight: map-get($font-weights, medium);
+        font-size: $h4-font-size;
+        margin-bottom: $m-1;
+    }
+
+    & p {
+        margin-bottom: $m-0-75;
+        font-size: $normal-font-size;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.3rem;
+    }
+
+    & a {
+        text-decoration: none;
+        color: $text-color;
+        font-weight: map-get($font-weights, medium);
+    }
+
+    & a:hover {
+        cursor: pointer;
+        color: green;
+        transition: ease-in-out .40s;
+    }
+}
+
+.work-exp-grid-item {
+
+    & ul li {
+        margin-left: $m-1-5;
+        font-size: $normal-font-size;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.3rem;
+    }
+}
+
+/*================= FORMAZIONE SECTION ===============*/
+
+.Formazione {
+
+    border-bottom: 1px solid lightseagreen;
+    
+    & h2 {
+        text-align: left;
+        font-weight: map-get($font-weights, semi-bold);
+        font-size: $h2-font-size;
+        margin-bottom: $m-1-5;
+    }
+
+    & h3 {
+        text-align: left;
+        font-weight: map-get($font-weights, medium);
+        font-size: $h3-font-size;
+        margin-bottom: $m-0-75;
+    }
+
+    & p {
+        margin-bottom: $m-0-75;
+        font-size: $normal-font-size;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.3rem;
+    }
+}
+
+/*================= COMP-PERSONALI SECTION ===============*/
+
+.Comp-personali {
+
+    border-bottom: 1px solid lightseagreen;
+
+    & h2 {
+        text-align: left;
+        font-weight: map-get($font-weights, semi-bold);
+        font-size: $h2-font-size;
+        margin-bottom: $m-1-5;
+    }
+
+    & h3 {
+        text-align: left;
+        font-weight: map-get($font-weights, medium);
+        font-size: $h3-font-size;
+        margin-bottom: $m-0-75;
+    }
+
+    & p {
+        margin-bottom: $m-0-75;
+        font-size: $normal-font-size;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.3rem;
+    }
+
+}
+
+.Comp-personali-grid {
+
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 10em;
+}
+
+/*================= COMP-TECNICHE SECTION ===============*/
+
+.Comp-tecniche {
+
+    border-bottom: 1px solid lightseagreen;
+
+    & h2 {
+        text-align: left;
+        font-weight: map-get($font-weights, semi-bold);
+        font-size: $h2-font-size;
+        margin-bottom: $m-1-5;
+    }
+
+    & h3 {
+        text-align: left;
+        font-weight: map-get($font-weights, medium);
+        font-size: $h3-font-size;
+        margin-bottom: $m-0-75;
+    }
+}
+
+.Comp-tecniche {
+
+    & ul {
+
+        margin-bottom: $m-0-75;
+    }
+
+    & ul li {
+        margin-left: $m-1-5;
+        font-size: $normal-font-size;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.3rem;
+    }
+}
