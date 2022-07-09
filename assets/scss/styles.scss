@@ -76,6 +76,17 @@ header.sticky {
         background-color: $span-color;
         transition: all ease-in-out .40s;
     }
+
+    & a::after {
+        content: '';
+        width: 0;
+        right: 0;
+        position: absolute;
+        bottom: -0.25rem;
+        height: .125rem;
+        background-color: transparent;
+        transition: ease .40s;
+    }
 }
 
 /*============ REUSABLE CSS =============*/
@@ -325,20 +336,20 @@ section {
 .Ending {
 
     & p {
-        margin-bottom: $m-0-75;
+        margin-bottom: $m-0-5;
         font-size: $big-font-size;
         font-weight: map-get($font-weights, medium);
         line-height: 1.5rem;
     }
 
     & button {
+        display: inline-block;
         background-color: $span-color;
         color: $text-color;
         font-weight: map-get($font-weights, bold);
         font-size: $big-font-size;
         border: 2px solid black;
         border-radius: 2em;
-        margin-top: $m-1;
         width: 120px;
         padding: .5em;
     }

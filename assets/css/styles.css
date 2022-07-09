@@ -64,6 +64,16 @@ header.sticky {
   background-color: #6f4f55;
   transition: all ease-in-out 0.4s;
 }
+.navbar a::after {
+  content: "";
+  width: 0;
+  right: 0;
+  position: absolute;
+  bottom: -0.25rem;
+  height: 0.125rem;
+  background-color: transparent;
+  transition: ease 0.4s;
+}
 
 /*============ REUSABLE CSS =============*/
 section {
@@ -261,19 +271,19 @@ section {
 
 /*================= ENDING SECTION ===============*/
 .Ending p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5rem;
 }
 .Ending button {
+  display: inline-block;
   background-color: #6f4f55;
   color: black;
   font-weight: 700;
   font-size: 1.5rem;
   border: 2px solid black;
   border-radius: 2em;
-  margin-top: 1rem;
   width: 120px;
   padding: 0.5em;
 }
