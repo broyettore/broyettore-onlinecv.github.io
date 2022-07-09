@@ -328,7 +328,7 @@ section {
         margin-bottom: $m-0-75;
         font-size: $big-font-size;
         font-weight: map-get($font-weights, medium);
-        line-height: 1.3rem;
+        line-height: 1.5rem;
     }
 
     & button {
@@ -369,10 +369,24 @@ section {
     border-radius: .5rem;
 }
 
+@media only screen and (min-width: 767px) and (max-width: 1060px) {
 
-@media (max-width: 960px) {
     section {
-        width: 100%;
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: $m-1;
+        padding: 1.5em;
+    }
+
+    .img-container {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    section {
+        width: 80%;
         margin: 0 auto;
         margin-bottom: $m-1;
         padding: 1.5em;
@@ -388,5 +402,37 @@ section {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 1em;
+    }
+
+    h1 {
+        font-size: $h1-res-font-size;
+    }
+
+    h2 {
+        font-size: $h2-res-font-size;
+    }
+
+    h3 {
+        font-size: $h3-res-font-size;
+    }
+
+    p {
+        font-size: $normal-res-font-size;
+    }
+
+    .Ending p {
+        font-size: $big-res-font-size;
+    }
+
+    .Ending button {
+        font-size: $big-res-font-size;
+    }
+
+    .profile img {
+        max-height: 10em;
+    }
+
+    .img-container {
+        width: 90%;
     }
 }
